@@ -7,7 +7,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Gerador de Senhas",
-  description: "Gerador de senhas seguras com Next.js e Shadcn UI",
+  description: "Gerador de senhas seguras",
+  icons: {
+    icon: [
+      {
+        url: "public/trancar.png", // /public path
+        href: "public/trancar.png", // /public path
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -18,6 +26,7 @@ export default function RootLayout({ children }) {
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8155657319861390"
         crossorigin="anonymous"
       ></script>
+      <meta name="google-adsense-account" content="ca-pub-8155657319861390" />
       <body className={inter.className}>
         {children}
         <Toaster position="top-right" richColors />
